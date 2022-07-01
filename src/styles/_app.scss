@@ -1,0 +1,10 @@
+.default-theme {
+  color: var(--v-theme-text-primary);
+  font-family: var(--v-body-font-family);
+  background-color: var(--o-color-2) !important;
+
+  // fonts
+  .roboto-5 {
+    font-family: var(--o-roboto-5);
+  }
+}

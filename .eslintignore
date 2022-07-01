@@ -1,0 +1,9 @@
+public/*
+dist/*
+tests/*
+scripts/*
+src/plugins/*
+
+# gulpfile
+gulpfile.js
+vue.config.js

@@ -1,0 +1,11 @@
+{
+    "baseUrl": "http://localhost:8080/#/",
+    "testFiles": "**/*.{coffee,feature,features,spec.js}",
+    "fixturesFolder": "tests/e2eAuto/cypress/fixtures",
+    "integrationFolder": "tests/e2eAuto/cypress/integration",
+    "pluginsFolder": "tests/e2eAuto/cypress/plugins",
+    "pluginsFile": "tests/e2eAuto/cypress/plugins/index.js",
+    "viewportWidth": 1920,
+    "viewportHeight": 1080,
+    "supportFile": "tests/e2eAuto/cypress/support/index.js"
+}

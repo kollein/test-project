@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <title>listing-search</title>
+  </head>
+
+  <body>
+    <test-project></test-project>
+    <script>
+      const ndContext = {
+        site: {
+          url: 'https://performancetest.dealerwebsite.co.uk',
+          stockScope: {
+            defaultValues: {},
+            sectionCustomQuery: {},
+            type: 'groupHash',
+            values: ['2375a2776dc187291e2fd928aeb5136e54f10a3a'],
+            usedFinanceDefaults: {
+              annualMileage: '5000',
+              deposit: '25',
+              depositType: 'percentage',
+              term: '12',
+              product: 'Hire Purchase',
+            },
+          },
+          gfSearchApi: {
+            uuid: 'b03ab890-5fc0-11eb-8723-bf1709c848d3',
+            clientToken: '3e826840-5fc2-11eb-94bf-77637b708bd3',
+            apiUrl: 'https://production-api.search-api.netdirector.auto',
+          },
+          onlineDepositSoftwareHash: 'e2c72ddd5c3c8db08b6ef42208daad9d19e2e60d',
+          onlineDepositUrl: '',
+          valuationGroupSoftwareHash: '4aa884911f449ee9a19f258530e936683b3c27be',
+          groupHash: '2375a2776dc187291e2fd928aeb5136e54f10a3a',
+          franchiseHash: 'e38dd1c2f6e075c7db7727ae6b34285eb914b252',
+          groupSoftwareHash: 'e2c72ddd5c3c8db08b6ef42208daad9d19e2e60d',
+          locationHash: '9b2b03a9efc40ddec8fc19ea3f3b9ed2d6828acf',
+          listingUrl: 'https://performancetest.dealerwebsite.co.uk/all-vehicles/',
+          googleMapKey: 'AIzaSyDe3jlGjmFtni096oMlkeFA9S218cPmYbE',
+          isOwnershipEnabled: true,
+          ownershipUrl: 'https://ownership-demo.auto.gforcestestlink.co.uk/ownership/',
+          privacyPageUrl: '',
+          isRecommendedVehiclesEnabled: true,
+          id: '9197',
+        },
+        vehicle: {
+          id: '14206762',
+          identifiers: {
+            kiaFscCode: '',
+            kiaConfigurationId: '',
+          },
+          price: {
+            current: '',
+            vatIncluded: '',
+            currencycode: '',
+          },
+          condition: '',
+          isFranchiseApproved: '',
+          colour: {
+            exteriorCode: '',
+          },
+        },
+        auth: {
+          clientId: 'e3426806-5464-455e-b082-764a07e783fe',
+        },
+        trackingService: {
+          module: ['snowplow'],
+        },
+      };
+
+      if (window.nd) {
+        window.nd.auto.require(['context/provider'], function(provider) {
+          const providerDetails = provider.get();
+          ndContext.auth.clientId = providerDetails['auth']['clientId'];
+          window.ND_COMPONENT_CONTEXT = ndContext;
+        });
+      } else {
+        window.ND_COMPONENT_CONTEXT = ndContext;
+      }
+    </script>
+  </body>
+</html>

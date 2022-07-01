@@ -1,0 +1,15 @@
+.v-btn {
+  background-color: transparent;
+  &.h-normal {
+    min-height: 44px;
+  }
+
+  &.btn-no-padding {
+    padding: 0 !important;
+    min-width: auto !important;
+    min-height: auto !important;
+    width: auto !important;
+    height: auto !important;
+    line-height: unset !important;
+  }
+}

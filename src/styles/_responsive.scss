@@ -1,0 +1,25 @@
+@media #{map-get($display-breakpoints, 'md-and-up')} {
+  .card-content {
+    min-height: 632px;
+
+    .item {
+      transform: translateY(2ch);
+      transition: transform 0.3s ease-out;
+    }
+
+    p {
+      transition: opacity 0.3s ease-out;
+      opacity: 0;
+    }
+  }
+}
+
+@media #{map-get($display-breakpoints, 'md-and-down')} {
+  [name="core-btn"] {
+    &.col-12.col-md-auto {
+      .v-btn {
+        width: 100%;
+      }
+    }
+  }
+}
